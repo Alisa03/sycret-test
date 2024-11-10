@@ -1,0 +1,17 @@
+.wrapper {
+    position: sticky;
+    inset: 0;
+    z-index: 2;
+
+    width: 100%;
+    padding: 1rem 0;
+
+    backdrop-filter: blur(10px);
+    background-color: color-mix(in srgb, var(--white) 50%, transparent);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}

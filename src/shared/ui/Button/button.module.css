@@ -1,0 +1,70 @@
+.btn {
+    position: relative;
+    
+    min-width: 15rem;
+    padding: .8rem 1rem;
+
+    border-radius: 8px;
+
+    font: 500 1.2rem/1.3 var(--font-family);
+    text-align: center;
+
+    transition: all var(--animation-time) ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.containe_light {
+    color: var(--black);
+    background: var(--green);
+}
+.containe_light:hover {filter: contrast(150%)}
+.containe_light:active {filter: grayscale(0.2)}
+
+.containe_light:disabled {
+    cursor: auto;
+    filter: grayscale(0.5);
+}
+.containe_light:disabled:hover, .containe_light:disabled:active {
+    filter: grayscale(0.5);
+}
+
+.main {
+    min-width: 5rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    --loader-size: calc(1.2rem * 1.3);
+    --loader-border-size: 2px;
+    --loader-border-color: #fff;
+
+    position: relative;
+
+    width: var(--loader-size);
+    height: var(--loader-size);
+
+    background-color: transparent;
+    border: var(--loader-border-size) solid var(--loader-border-color);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+
+    animation: rotateX 1s infinite linear;
+}
+
+@keyframes rotateX {
+    from {transform: rotateZ(0deg)}
+    to {transform: rotateZ(360deg)}
+}
+
+@media (max-width: 450px) {
+    .btn {
+        min-width: 12rem;
+        font-size: 1rem;
+    }
+}

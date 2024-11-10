@@ -1,0 +1,20 @@
+:root {
+    --color-background: #0E0B12;
+    --color-text: #fff;
+
+    --green: #BCFF5E;
+    --blue: #0366FF;
+    --black: #181A1B;
+    --black2: #292B2F;
+    --white: #fff;
+    --red: #f91155;
+
+    --text: var(--black2);
+    --background: color-mix(in srgb, var(--blue) 5%, transparent);
+
+    --font-family: 'Inter';
+
+    --border-radius: 20px;
+
+    --animation-time: .7s
+}

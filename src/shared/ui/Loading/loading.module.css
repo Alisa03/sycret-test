@@ -1,0 +1,39 @@
+.main {
+    width: 100%;
+    min-height: 100dvh;
+    height: 100vh;
+
+    position: absolute;
+    inset: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.loader {
+    --loader-size: calc(1.2rem * 1.3);
+    --loader-border-size: 2px;
+    --loader-border-color: var(--black);
+
+    position: relative;
+
+    width: var(--loader-size);
+    height: var(--loader-size);
+
+    background-color: transparent;
+    border: var(--loader-border-size) solid var(--loader-border-color);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+
+    animation: rotateX 1s infinite linear;
+}
+
+@keyframes rotateX {
+    from {transform: rotateZ(0deg)}
+    to {transform: rotateZ(360deg)}
+}
